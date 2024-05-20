@@ -25,7 +25,7 @@ const BlogCategory: React.FC = () => {
   const fetchData = async () => {
     try {
       const accessToken = localStorage.getItem('accessToken');
-      const response = await fetch(`https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/searchcategory/${category}`, {
+      const response = await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/searchcategory/${category}`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
