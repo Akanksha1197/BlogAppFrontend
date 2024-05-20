@@ -30,7 +30,7 @@ setLoading(true);
     try {
       const accessToken = localStorage.getItem('accessToken');
 
-      const response = await fetch("https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/upload", {
+      const response = await fetch("https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/upload", {
         method: 'POST',
         body: formData,
         headers: {
