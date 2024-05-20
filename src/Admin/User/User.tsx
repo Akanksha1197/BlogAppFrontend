@@ -18,7 +18,7 @@ const Users:React.FC = () => {
     const [media , setMedia]=useState(window.innerWidth>400);
     useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch('https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/blogs');
+            const response = await fetch('https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/blogs');
             if (response.ok) {
                 const post=await response.json();
                 setUsers(post);
@@ -32,7 +32,7 @@ const Users:React.FC = () => {
 
     const Delete=async(postId:string)=>{
     
-        const response=await fetch(`https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/deletepost/${postId}`,{
+        const response=await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/deletepost/${postId}`,{
           method:'DELETE',
         
       });
