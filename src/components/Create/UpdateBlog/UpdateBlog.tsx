@@ -19,7 +19,7 @@ const UpdateBlogPage: React.FC = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/category/${id}`);
+        const response = await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/category/${id}`);
         if (response.ok) {
           const postData = await response.json();
           setTitle(postData.title);
@@ -48,7 +48,7 @@ const UpdateBlogPage: React.FC = () => {
       setLoading(true);
       const accessToken = localStorage.getItem('accessToken');
 
-      const response = await fetch(`https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/update/${id}`, {
+      const response = await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/update/${id}`, {
         method: 'PUT',
         body: formData,
         headers: {
