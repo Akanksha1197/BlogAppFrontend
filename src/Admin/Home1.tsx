@@ -12,7 +12,7 @@ function Home1() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const res = await fetch("https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/blogs");
+                const res = await fetch("https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/blogs");
                 if (res.ok) {
                     const data = await res.json();
                     setTotalPost(data.length);
@@ -27,7 +27,7 @@ function Home1() {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await fetch("https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/getUsers");
+                const res = await fetch("https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/getUsers");
                 if (res.ok) {
                     const data = await res.json();
                     setTotalUsers(data.length);
