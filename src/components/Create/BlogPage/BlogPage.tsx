@@ -34,7 +34,7 @@ const BlogPage: React.FC= () => {
     setCurrentUser(username);
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://blogbackend-0w23.onrender.com/api/category/${id}`);
+        const response = await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/category/${id}`);
         if (response.ok) {
           const postData = await response.json();
           setPost(postData);
@@ -53,7 +53,7 @@ const BlogPage: React.FC= () => {
   const Delete=async(postId:string)=>{
     const accessToken = localStorage.getItem('accessToken');
 
-    const response=await fetch(`https://blogbackend-0w23.onrender.com/api/delete/${postId}`,{
+    const response=await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/delete/${postId}`,{
       method:'DELETE',
       headers: {
         Authorization: `Bearer ${accessToken}`,        },
@@ -68,7 +68,7 @@ e.preventDefault();
 try {
   const username = localStorage.getItem('username');
      
-  const response=await fetch('https://blogbackend-0w23.onrender.com/api/comment/newcomment',{
+  const response=await fetch('https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/comment/newcomment',{
     method:"POST",
    headers:{
     'Content-Type':'application/json',
@@ -94,7 +94,7 @@ try {
 useEffect(()=>{
 const fetchcomment=async()=>{
   try {
-    const response=await fetch('https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/comment/getcomment');
+    const response=await fetch('https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/comment/getcomment');
     if(!response.ok){
       throw new Error('Failed to fetch comment data');
     }
@@ -113,7 +113,7 @@ fetchcomment();
 
 const DeleteComment=async(commentid:string)=>{
 try {
-  const response=await fetch(`https://blogappbackend-6xq6uek66-akankshas-projects-76b3734f.vercel.app/api/comment/deletecomment/${commentid}`,{
+  const response=await fetch(`https://blogappbackend-8v3b4h9a0-akankshas-projects-76b3734f.vercel.app/api/comment/deletecomment/${commentid}`,{
     method:"DELETE"
     
   })
