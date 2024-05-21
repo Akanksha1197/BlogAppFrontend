@@ -28,7 +28,9 @@ const HandleChange=(e:ChangeEvent<HTMLInputElement>)=>{
           username,
           email,
           password,
-        })
+        }),
+          credentials: 'include'
+        
       });
       console.log("respose", response);
       if (!response.ok) {
